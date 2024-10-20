@@ -13,18 +13,18 @@
             font-family: 'Times New Roman', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('008.jpg'); /* Menambahkan gambar latar belakang */
-            background-size: cover; /* Menyesuaikan gambar agar menutupi seluruh halaman */
-            background-position: center; /* Memposisikan gambar di tengah */
-            background-attachment: fixed; /* Agar gambar tetap di tempat saat di-scroll */
-            color: #333; /* Warna teks untuk kontras */
+            background-image: url('008.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
         }
 
         .container {
-            max-width: 1000px;
-            margin: 100px auto;
-            background-color: rgba(191, 212, 224, 0.85); /* Warna latar belakang dengan transparansi */
-            padding: 30px;
+            max-width: 100%;
+            margin: 20px;
+            background-color: rgba(191, 212, 224, 0.85);
+            padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
@@ -47,14 +47,15 @@
 
         .biodata-grid {
             display: grid;
-            grid-template-columns: 150px auto;
-            grid-column-gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-column-gap: 10px;
             align-items: center;
             margin-bottom: 20px;
         }
 
         .biodata-grid div {
             margin-bottom: 8px;
+            word-wrap: break-word; /* Memastikan teks panjang terputus */
         }
 
         .biodata-grid div:nth-child(odd) {
@@ -67,8 +68,9 @@
         }
 
         .profile-pic img {
-            width: 250px;
-            height: 250px;
+            width: 100%;
+            max-width: 250px;
+            height: auto;
             border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -81,13 +83,16 @@
             color: #777;
         }
 
-        /* Tambahan untuk memperjelas teks di navbar */
         .navbar-dark .navbar-nav .nav-link {
             color: white !important;
         }
 
         .navbar-dark .navbar-brand {
             color: white !important;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
         }
     </style>
 </head>
@@ -109,7 +114,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="perbandingan_senilai.html">Materi</a>
                     </li>
-                    <!-- Media Pembelajaran Dropdown List -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Media Pembelajaran
