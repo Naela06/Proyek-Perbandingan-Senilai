@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
     <style>
         /* Tambahkan latar belakang di body dengan animasi */
         body {
-            background-image: url('021.JPG');
+            background-image: url('021.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
