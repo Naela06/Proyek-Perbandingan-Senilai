@@ -22,6 +22,13 @@
         .navbar {
             background-color: #d6a1c6; /* Warna kuning seperti gambar */
             padding: 20px 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -50,7 +57,6 @@
         /* Pengaturan untuk ikon sosial media */
         .social-icons {
             display: flex;
-            flex-direction: row; /* Susun horizontal secara default */
             justify-content: center; /* Logo berada di tengah */
             gap: 20px; /* Tambahkan jarak antar ikon */
             margin-top: 20px;
@@ -65,7 +71,7 @@
             width: 120px;
             text-align: center;
             animation: pulse 1.5s infinite;
-            display: flex;
+            display: flex; /* Gunakan flexbox */
             flex-direction: column; /* Susun gambar dan teks secara kolom */
             align-items: center; /* Tengahkan secara horizontal */
             justify-content: center; /* Tengahkan secara vertikal */
@@ -74,22 +80,14 @@
         }
 
         .social-icon:hover {
-            background: rgba(221, 122, 196, 0.3);
-            transform: scale(1.2);
+            background: rgba(221, 122, 196, 0.3); /* Warna latar belakang saat hover */
+            transform: scale(1.2); /* Memperbesar saat hover */
         }
 
         .social-icon img {
             width: 70px;
             height: 70px;
             margin-bottom: 10px; /* Jarak antara ikon dan teks */
-        }
-
-        /* Media query untuk tampilan mobile */
-        @media (max-width: 767px) {
-            .social-icons {
-                flex-direction: column; /* Susun secara vertikal di ponsel */
-                gap: 10px; /* Jarak antar ikon lebih sedikit */
-            }
         }
 
         /* Animasi */
@@ -100,34 +98,44 @@
     </style>
 </head>
 <body>
-
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="kontak.html">Contact Us</a>
+        <a class="navbar-brand" href="#">NAELA MAGFIROH</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="kelas7.html">Home</a>
+                    <a class="nav-link" href="kelas7.html">Beranda</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="perbandingan_senilai.html">Materi</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Quiz.html">Kuis</a>
+                </li>
+                <!-- Dropdown Pembelajaran Media -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Media Pembelajaran
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Pembelajaran Media
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="mediaDropdown">
-                        <li><a class="dropdown-item" href="video.html">Video Pembelajaran</a></li>
-                        <li><a class="dropdown-item" href="grafikgeogebra.html">Geogebra Grafik</a></li>
-                        <li><a class="dropdown-item" href="Lembar Kerja.html">Lembar Kerja</a></li>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMedia">
+                        <li><a class="dropdown-item" href="video.html">Video</a></li>
+                        <li><a class="dropdown-item" href="grafikgeogebra.html">Latihan 1</a></li>
+                        <li><a class="dropdown-item" href="Lembar Kerja.html">Latihan 2</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="biodata.html">Biodata</a>
+                <!-- Dropdown Tentang Kami -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tentang Kami
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
+                        <li><a class="dropdown-item" href="biodata.html">Biodata</a></li>
+                        <li><a class="dropdown-item" href="kontak.html">Kontak Saya</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
